@@ -1,19 +1,19 @@
-# NETWORKWALKS-B084-WK4-Penetration_Testing_Project-Mediroza_General_Hospital
+# NETWORKWALKS-B084-WK4-PENETRATION-TESTING-PROJECT
 # PENETRATION TESTING REPORT
 ### MEDIROZA GENERAL HOSPITAL – FULL PENETRATION TESTING PROJECT
 ### W4-PM-FINAL | CYBERSECURITY | NETWORKWALKS
 # Project Information	Details
-Pentester Name	[Your full name]
-Program/Batch	Networkwalks – B083
-Date	23 November 2026
-Project	Week 4 – Penetration Testing Project
-Client/Target	Mediroza General Hospital
-Target Domain	https://medirozahospital.com
-
-Testing Type	Black-box Penetration Testing
-Permission	Educational testing environment, as authorized by the internship
-Phases Covered	M1: Initial Access; M2: Data Extraction; M3: Further Data Exposure; M4: Reporting
-Status	Completed
+| Pentester Name |	Kondwani Ngwenya |
+| :--- | :---|
+| Program/Batch	| Networkwalks – B083 |
+| Date	| 23 November 2026 |
+| Project	Week 4 |  Penetration Testing Project |
+| Client/Target |	Mediroza General Hospital |
+| Target Domain	| https://medirozahospital.com |
+| Testing Type |	Black-box Penetration Testing |
+| Permission	| Educational testing environment, as authorized by the internship |
+| Phases Covered |	M1: Initial Access; M2: Data Extraction;<br> M3: Further Data Exposure; M4: Reporting |
+| Status |	Completed |
 ________________________________________
 1. Liability Disclaimer
 This penetration-testing project was conducted as part of the Networkwalks Cybersecurity Internship in an educational and authorized testing environment.
