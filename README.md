@@ -172,6 +172,7 @@ The experience reinforced the importance of ethical conduct, proper authorizatio
 
 ### M1 – Initial Access
 Target website and discovered entry points.
+
 <img width="1366" height="768" alt="Whatweb and nslookup" src="https://github.com/user-attachments/assets/a4f9ea5d-2517-4c95-aba2-9c60be22f8b7" />
 <img width="1366" height="768" alt="wafwoof and curl -I" src="https://github.com/user-attachments/assets/1d3601f0-edc5-470d-992d-10aacea31bd8" />
 <img width="1366" height="768" alt="nmap scan sv" src="https://github.com/user-attachments/assets/7253c72c-6f8b-4cf6-8e16-61393f014d52" />
@@ -219,7 +220,7 @@ END OF REPORT
 | Author:| Kondwani Ngwenya |
 | :--- | :--- |
 | Program: |  Cybersecurity Program – Networkwalks |
-| Batch: B083 |
+| Batch | B083 |
 | Project: | Week 4 – Penetration Testing Project | 
 | Instructor: | Waqas Karim (CCIE) | 
 | Organization: | Networkwalks | 
