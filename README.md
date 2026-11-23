@@ -1,6 +1,6 @@
 # NETWORKWALKS-B084-WK4-PENETRATION-TESTING-PROJECT
 # PENETRATION TESTING REPORT
-### MEDIROZA GENERAL HOSPITAL – FULL PENETRATION TESTING PROJECT
+## MEDIROZA GENERAL HOSPITAL – FULL PENETRATION TESTING PROJECT
 ### W4-PM-FINAL | CYBERSECURITY | NETWORKWALKS
 # Project Information	Details
 | Pentester Name |	Kondwani Ngwenya |
@@ -15,7 +15,7 @@
 | Phases Covered |	M1: Initial Access; M2: Data Extraction;<br> M3: Further Data Exposure; M4: Reporting |
 | Status |	Completed |
 ---
-### 1. Liability Disclaimer
+## 1. Liability Disclaimer
 This penetration-testing project was conducted as part of the Networkwalks Cybersecurity Internship in an educational and authorized testing environment.
 The activities described in this report were performed within the assigned project scope for learning and research purposes. The findings and recommendations are intended to demonstrate practical cybersecurity skills and improve understanding of common web application security weaknesses.
 
@@ -62,28 +62,20 @@ During the authentication testing, I identified an SQL injection-related weaknes
 The error message referenced the MySQL server's SQL syntax, indicating that the application was interacting with a MySQL database.
 This finding demonstrated inadequate handling of user input and the exposure of internal database error information.
 The initial access milestone was completed, and the evidence collected was used to support the subsequent project activities.
-Evidence to insert:
-•	Screenshot of the target website.
-•	Screenshot of the patient and staff login pages.
-•	Screenshot showing the SQL-related error.
-•	Screenshot demonstrating the completed initial access exercise.
+
 #### 4.2 M2 – Data Extraction and PDF Analysis
 The second milestone involved examining the PDF laboratory reports recovered during the initial access exercise.
-Three PDF files were recovered:
-•	patient_report_1.pdf
-•	patient_report_2.pdf
-•	patient_report_3.pdf
+Three PDF files were recovered:<br>
+•	patient_report_1.pdf<br>
+•	patient_report_2.pdf<br>
+•	patient_report_3.pdf<br>
 I used John the Ripper during the password recovery exercise to investigate the password protection applied to the documents.
 After recovering the passwords, I examined the PDF properties using ExifTool and pdfinfo.
 The examination revealed that the documents used Standard V2.3 PDF encryption with RC4 and 128-bit encryption.
 Additional document metadata was identified, including the document creator and producer.
 One notable observation was that the third PDF contained a different author value and indicated the presence of custom metadata.
 The exercise demonstrated that password-protected documents can still present security risks when weak passwords are used.
-Evidence to insert:
-•	Screenshot showing the three recovered PDF files.
-•	Screenshot of the password recovery process.
-•	Screenshot of the ExifTool output.
-•	Screenshot of the pdfinfo output.
+
 #### 4.3 M3 – Further Data Exposure
 The third milestone focused on identifying further information exposure within the simulated hospital environment.
 During this phase, I discovered a publicly accessible SQL database backup through a misconfigured directory listing.
