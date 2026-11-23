@@ -5,7 +5,7 @@
 # Project Information	Details
 | Pentester Name |	Kondwani Ngwenya |
 | :--- | :---|
-| Program/Batch	| Networkwalks – B083 |
+| Program/Batch	| Networkwalks – B084 |
 | Date	| 23 November 2026 |
 | Project	Week 4 |  Penetration Testing Project |
 | Client/Target |	Mediroza General Hospital |
@@ -14,14 +14,16 @@
 | Permission	| Educational testing environment, as authorized by the internship |
 | Phases Covered |	M1: Initial Access; M2: Data Extraction;<br> M3: Further Data Exposure; M4: Reporting |
 | Status |	Completed |
-________________________________________
-1. Liability Disclaimer
+---
+### 1. Liability Disclaimer
 This penetration-testing project was conducted as part of the Networkwalks Cybersecurity Internship in an educational and authorized testing environment.
 The activities described in this report were performed within the assigned project scope for learning and research purposes. The findings and recommendations are intended to demonstrate practical cybersecurity skills and improve understanding of common web application security weaknesses.
+
 This report is intended for educational and security assessment purposes only. The information contained herein should not be used to access, modify or disclose information belonging to systems without appropriate authorization.
 The author, instructor and Networkwalks are not responsible for unauthorized use or misuse of the techniques described in this report.
-2. Introduction
-This report presents the findings from the Week 4 Penetration Testing Project conducted as part of the Networkwalks Cybersecurity Internship, Batch B083.
+
+### 2. Introduction
+This report presents the findings from the Week 4 Penetration Testing Project conducted as part of the Networkwalks Cybersecurity Internship, Batch B084.
 The project involved conducting a black-box penetration test against a simulated hospital environment, Mediroza General Hospital, using the assigned target domain.
 The main objective was to identify security weaknesses in the web application, investigate authentication mechanisms, examine protected PDF documents and identify exposed information that could affect the confidentiality of hospital records.
 The assessment was divided into four milestones:
@@ -30,20 +32,23 @@ The assessment was divided into four milestones:
 •	M3 – Further Data Exposure: Investigating an exposed database backup containing employee salary and shareholder information.
 •	M4 – Penetration Testing Report: Documenting the findings, their potential impact, risk ratings and recommended security improvements.
 The assessment involved Kali Linux, command-line utilities, PDF analysis tools and MySQL. Evidence was collected throughout the project to support the findings presented in this report.
-3. Tools Used
+
+### 3. Tools Used
 The following tools and technologies were used during the assessment.
-Tool	Purpose
-Kali Linux	Operating system used for penetration-testing activities.
-WHOIS	Obtaining publicly available domain registration information.
-WhatWeb	Identifying web technologies and server information.
-Nmap	Discovering open ports and identifying running services.
-Curl	Inspecting HTTP responses, headers and website resources.
-Browser	Accessing the target website and examining its web pages.
-ExifTool	Examining PDF document metadata.
-pdfinfo	Inspecting PDF properties and encryption information.
-John the Ripper	Recovering PDF passwords during the assigned data extraction exercise.
-MySQL / MySQL Workbench	Importing and examining the recovered SQL database backup.
-4. Activities Performed
+| Tool	| Purpose |
+| :--- | :--- |
+| Kali Linux	| Operating system used for penetration-testing activities. |
+| WHOIS	| Obtaining publicly available domain registration information. | 
+| WhatWeb	 | Identifying web technologies and server information. | 
+| Nmap |	Discovering open ports and identifying running services.   |
+| Curl	| Inspecting HTTP responses, headers and website resources. | 
+| Browser(Firefox and Chrome)	| Accessing the target website and examining its web pages. | 
+| ExifTool	| Examining PDF document metadata. | 
+| pdfinfo |	Inspecting PDF properties and encryption information. |
+| John the Ripper |	Recovering PDF passwords during the assigned data extraction exercise. |
+| MySQL / MySQL Workbench	| Importing and examining the recovered SQL database backup. |
+
+### 4. Activities Performed
 4.1 M1 – Initial Access
 The first milestone involved examining the target website and identifying exposed entry points.
 I began by conducting reconnaissance to understand the website's structure and identify the available authentication pages.
