@@ -69,6 +69,7 @@ Three PDF files were recovered:<br>
 - patient_report_1.pdf
 - patient_report_2.pdf
 - patient_report_3.pdf
+  
 I used John the Ripper during the password recovery exercise to investigate the password protection applied to the documents.
 After recovering the passwords, I examined the PDF properties using ExifTool and pdfinfo.
 The examination revealed that the documents used Standard V2.3 PDF encryption with RC4 and 128-bit encryption.
@@ -92,6 +93,7 @@ The staff table contained the following fields:
 - national_id
 - monthly_salary_zar
 - date_joined
+  
 The monthly_salary_zar field contained the employee salary information required for the milestone.
 #### B. Shareholders table
 The shareholders table contained:
@@ -100,6 +102,7 @@ The shareholders table contained:
 -	share_percent
 - shares_held
 - share_class
+  
 These fields represented shareholder identities and ownership information.
 I imported the recovered SQL backup into a local MySQL database on Windows to examine its structure and records.
 This confirmed that the exposed backup contained the database tables required to fulfil the M3 objectives.
@@ -107,15 +110,27 @@ The finding demonstrated the risk created when database backups containing confi
 
 ## 5. Risk Analysis / Impact
 Based on the activities performed, the following security findings were identified.
+
 No.	Risk / Finding	Evidence / Observation	Potential Impact	Risk Level
-1	SQL injection in patient authentication	SQL-related error exposed through mysqli_query() during authentication testing.	Could allow manipulation of database queries and compromise authentication or database confidentiality.	High
-2	Weak PDF password protection	The three recovered PDF documents were password-protected using RC4-based PDF encryption.	Weak passwords may allow unauthorized recovery of protected document contents.	High
-3	Misconfigured directory listing	A publicly accessible directory exposed a database backup.	Visitors could discover and access files that should not be publicly available.	High
-4	Exposed database backup	The SQL backup contained staff and shareholder tables with confidential organizational information.	Exposure of employee salary information and shareholder ownership records could cause privacy, financial and reputational harm.	Critical
-5	Information disclosure through application errors	PHP and MySQL error information was exposed during login testing.	Attackers may obtain technical information useful for further attacks.	Medium
-Risk level key: Critical – Very serious security impact; High – Significant security weakness; Medium – Moderate security concern; Low – Limited security impact.
+1.	SQL injection in patient authentication
+SQL-related error exposed through mysqli_query() during authentication testing.	Could allow manipulation of database queries and compromise authentication or database confidentiality.	High
+2.	Weak PDF password protection	
+The three recovered PDF documents were password-protected using RC4-based PDF encryption.	Weak passwords may allow unauthorized recovery of protected document contents.	High
+3.	Misconfigured directory listing
+A publicly accessible directory exposed a database backup.	Visitors could discover and access files that should not be publicly available.	High
+4.	Exposed database backup
+The SQL backup contained staff and shareholder tables with confidential organizational information.	Exposure of employee salary information and shareholder ownership records could cause privacy, financial and reputational harm.	Critical
+5.	Information disclosure through application errors
+PHP and MySQL error information was exposed during login testing.	Attackers may obtain technical information useful for further attacks.	Medium
+- Risk level key:
+- Critical – Very serious security impact;
+  High – Significant security weakness;
+  Medium – Moderate security concern;
+  Low – Limited security impact.
+  
 The risk ratings are based on the observed weaknesses and their potential impact within the simulated environment. The exposed database backup was rated Critical because it contained multiple categories of confidential organizational information.
-6. Recommendations
+
+## 6. Recommendations
 Based on the findings from the penetration-testing exercise, the following security improvements are recommended.
 1. Prevent SQL injection
 The application should use prepared statements and parameterized queries when interacting with the MySQL database. User input should never be directly incorporated into SQL statements.
@@ -135,16 +150,22 @@ Detailed PHP and MySQL error messages should not be displayed to ordinary websit
 The organization should periodically assess its web applications, authentication mechanisms, server configuration and backup storage arrangements.
 9. Implement access monitoring
 The organization should monitor access to sensitive files and database backups and investigate suspicious access attempts.
-7. Conclusion
+
+## 7. Conclusion
 During Week 4 of my Networkwalks Cybersecurity Internship, I completed a practical penetration-testing project against the simulated Mediroza General Hospital environment.
 The project covered the major stages of a penetration-testing engagement, from reconnaissance and initial access to data extraction, further data exposure and professional reporting.
+
 During M1, I examined the hospital website's authentication mechanisms and identified an SQL injection-related weakness in the patient login process.
+
 During M2, I recovered three password-protected PDF laboratory reports and examined their encryption and metadata.
+
 During M3, I discovered a publicly accessible SQL database backup through a misconfigured directory listing. The backup contained staff and shareholder tables with information relevant to the assignment objectives. I imported the backup into a local MySQL environment for examination.
+
 Finally, I documented the findings, assessed their potential impact and developed recommendations to address the identified weaknesses.
 This project improved my understanding of how individual vulnerabilities can combine to create serious security risks. It also demonstrated the importance of following a structured testing process, collecting evidence and communicating findings clearly.
 The experience reinforced the importance of ethical conduct, proper authorization and responsible handling of sensitive information during cybersecurity assessments.
-8. Evidences Collected
+
+## 8. Evidences Collected
 The following screenshots should be included to demonstrate the activities performed during the assessment.
 M1 – Initial Access
 •	Evidence 1: Target website and discovered entry points.
