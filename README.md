@@ -1,4 +1,4 @@
-# NETWORKWALKS-B084-WK4-PENETRATION-TESTING-PROJECT
+<img width="1366" height="768" alt="Whatweb and nslookup" src="https://github.com/user-attachments/assets/f2b8befd-ef04-43c5-a5b0-ec53fcd8cfed" /># NETWORKWALKS-B084-WK4-PENETRATION-TESTING-PROJECT
 # PENETRATION TESTING REPORT
 ## MEDIROZA GENERAL HOSPITAL – FULL PENETRATION TESTING PROJECT
 ### W4-PM-FINAL | CYBERSECURITY | NETWORKWALKS
@@ -169,26 +169,51 @@ This project improved my understanding of how individual vulnerabilities can com
 The experience reinforced the importance of ethical conduct, proper authorization and responsible handling of sensitive information during cybersecurity assessments.
 
 ## 8. Evidences Collected
-The following screenshots should be included to demonstrate the activities performed during the assessment.
-M1 – Initial Access
-•	Evidence 1: Target website and discovered entry points.
-•	Evidence 2: Patient login form.
-•	Evidence 3: SQL injection-related error.
-•	Evidence 4: Initial access evidence.
-M2 – Data Extraction
-•	Evidence 5: Three recovered PDF files.
-•	Evidence 6: PDF password recovery evidence.
-•	Evidence 7: PDF metadata examination.
-•	Evidence 8: PDF encryption information.
-M3 – Further Data Exposure
-•	Evidence 9: Exposed directory listing.
-•	Evidence 10: Accessible SQL database backup.
-•	Evidence 11: SQL database table definitions.
-•	Evidence 12: Successful local MySQL import.
-•	Evidence 13: Redacted employee salary table evidence.
-•	Evidence 14: Redacted shareholder table evidence.
-M4 – Reporting
-•	Evidence 15: Completed penetration-testing report.
+
+### M1 – Initial Access
+Target website and discovered entry points.
+<img width="1366" height="768" alt="Whatweb and nslookup" src="https://github.com/user-attachments/assets/a4f9ea5d-2517-4c95-aba2-9c60be22f8b7" />
+<img width="1366" height="768" alt="wafwoof and curl -I" src="https://github.com/user-attachments/assets/1d3601f0-edc5-470d-992d-10aacea31bd8" />
+<img width="1366" height="768" alt="nmap scan sv" src="https://github.com/user-attachments/assets/7253c72c-6f8b-4cf6-8e16-61393f014d52" />
+
+Patient login form.
+
+<img width="1366" height="768" alt="patient potal" src="https://github.com/user-attachments/assets/7f7671a6-c1ad-45ff-b727-d2f41e5e891a" />
+
+SQL injection-related error.
+<img width="1366" height="768" alt="Patient portal" src="https://github.com/user-attachments/assets/9827e79b-a48b-47d3-a89f-416e204de92b" />
+
+
+#### M2 – Data Extraction
+Three recovered PDF files.
+<img width="1366" height="768" alt="patient_report_1_unlocked pdf" src="https://github.com/user-attachments/assets/1da8a805-5521-4fdb-a74f-33545ab5f56a" />
+<img width="1366" height="768" alt="patient_report_2_Unlocked pdf" src="https://github.com/user-attachments/assets/d5f1aab8-e238-4bc7-a355-cfd5f8b5782f" />
+<img width="1366" height="768" alt="patient_report_3_unlocked pdf" src="https://github.com/user-attachments/assets/98963eed-55ec-4b85-984c-764139a581c0" />
+
+
+
+PDF password recovery evidence.
+<img width="1366" height="768" alt="John the reaper cracking psswd 2" src="https://github.com/user-attachments/assets/ad714b3c-e00a-481e-9bf6-d3753a97fc79" />
+
+PDF metadata examination.
+<img width="1366" height="768" alt="exiftool results" src="https://github.com/user-attachments/assets/84e47239-dcb9-4760-b0a3-88fd21a7d233" />
+
+
+### M3 – Further Data Exposure
+Exposed directory listing.
+<img width="1366" height="768" alt="directory listing" src="https://github.com/user-attachments/assets/d8fc5365-0a07-414e-87c4-7fb300fc1aea" />
+
+
+Accessible SQL database backup.
+<img width="1366" height="768" alt="backup database" src="https://github.com/user-attachments/assets/6d83c74f-dec0-43c9-972b-22c13c158b3b" />
+
+
+employee salary table evidence.
+<img width="1366" height="768" alt="SQL querry salary results" src="https://github.com/user-attachments/assets/c4595e26-ef34-4d91-86e7-6d5a5a992ca8" />
+
+shareholder table evidence.
+<img width="1366" height="768" alt="SQL query stakeholders details" src="https://github.com/user-attachments/assets/939e89ef-20fa-4eab-97a7-d4b330422c81" />
+
 ---
 END OF REPORT
 | Author:| Kondwani Ngwenya |
