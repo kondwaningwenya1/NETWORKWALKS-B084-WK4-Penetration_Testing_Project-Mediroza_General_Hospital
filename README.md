@@ -25,11 +25,11 @@ The author, instructor and Networkwalks are not responsible for unauthorized use
 ### 2. Introduction
 This report presents the findings from the Week 4 Penetration Testing Project conducted as part of the Networkwalks Cybersecurity Internship, Batch B084.
 The project involved conducting a black-box penetration test against a simulated hospital environment, Mediroza General Hospital, using the assigned target domain.
-The main objective was to identify security weaknesses in the web application, investigate authentication mechanisms, examine protected PDF documents and identify exposed information that could affect the confidentiality of hospital records.
-The assessment was divided into four milestones:
-•	M1 – Initial Access: Investigating the website's authentication mechanisms and identifying weaknesses that could allow unauthorized access to the patient portal.
-•	M2 – Data Extraction: Examining the recovered PDF reports and investigating their password protection.
-•	M3 – Further Data Exposure: Investigating an exposed database backup containing employee salary and shareholder information.
+The main objective was to identify security weaknesses in the web application, investigate authentication mechanisms, examine protected PDF documents and identify exposed information that could affect the confidentiality of hospital records.<br>
+The assessment was divided into four milestones:<br>
+•	M1 – Initial Access: Investigating the website's authentication mechanisms and identifying weaknesses that could allow unauthorized access to the patient portal.<br>
+•	M2 – Data Extraction: Examining the recovered PDF reports and investigating their password protection.<br>
+•	M3 – Further Data Exposure: Investigating an exposed database backup containing employee salary and shareholder information.<br>
 •	M4 – Penetration Testing Report: Documenting the findings, their potential impact, risk ratings and recommended security improvements.
 The assessment involved Kali Linux, command-line utilities, PDF analysis tools and MySQL. Evidence was collected throughout the project to support the findings presented in this report.
 
@@ -49,15 +49,16 @@ The following tools and technologies were used during the assessment.
 | MySQL / MySQL Workbench	| Importing and examining the recovered SQL database backup. |
 
 ### 4. Activities Performed
-4.1 M1 – Initial Access
+#### 4.1 M1 – Initial Access
 The first milestone involved examining the target website and identifying exposed entry points.
 I began by conducting reconnaissance to understand the website's structure and identify the available authentication pages.
-The reconnaissance activities identified the patient login and staff login pages:
-•	/patient/login.php
-•	/staff/login.php
+The reconnaissance activities identified the patient login and staff login pages:<br>
+•	/patient/login.php<br>
+•	/staff/login.php<br>
 I examined the login pages and their HTML form structures. The patient portal required a username and password, while the staff portal required a staff identifier and password.
 The login forms submitted information using the HTTP POST method.
-During the authentication testing, I identified an SQL injection-related weakness in the patient login mechanism. The application exposed a database error through the PHP mysqli_query() function.
+During the authentication testing, I identified an SQL injection-related weakness in the patient login mechanism. The application exposed a database error through the PHP mysqli_query() function.<br>
+
 The error message referenced the MySQL server's SQL syntax, indicating that the application was interacting with a MySQL database.
 This finding demonstrated inadequate handling of user input and the exposure of internal database error information.
 The initial access milestone was completed, and the evidence collected was used to support the subsequent project activities.
@@ -66,7 +67,7 @@ Evidence to insert:
 •	Screenshot of the patient and staff login pages.
 •	Screenshot showing the SQL-related error.
 •	Screenshot demonstrating the completed initial access exercise.
-4.2 M2 – Data Extraction and PDF Analysis
+#### 4.2 M2 – Data Extraction and PDF Analysis
 The second milestone involved examining the PDF laboratory reports recovered during the initial access exercise.
 Three PDF files were recovered:
 •	patient_report_1.pdf
@@ -83,7 +84,7 @@ Evidence to insert:
 •	Screenshot of the password recovery process.
 •	Screenshot of the ExifTool output.
 •	Screenshot of the pdfinfo output.
-4.3 M3 – Further Data Exposure
+#### 4.3 M3 – Further Data Exposure
 The third milestone focused on identifying further information exposure within the simulated hospital environment.
 During this phase, I discovered a publicly accessible SQL database backup through a misconfigured directory listing.
 The backup was available in plain-text SQL format and contained database definitions and insertion statements.
@@ -177,12 +178,13 @@ M3 – Further Data Exposure
 •	Evidence 14: Redacted shareholder table evidence.
 M4 – Reporting
 •	Evidence 15: Completed penetration-testing report.
-________________________________________
+---
 END OF REPORT
-Author: [Your Full Name]
-Program: Cybersecurity Program – Networkwalks
-Batch: B083
-Project: Week 4 – Penetration Testing Project
-Instructor: Waqas Karim (CCIE)
-Organization: Networkwalks
+| Author:| Kondwani Ngwenya |
+| :--- | :--- |
+| Program: |  Cybersecurity Program – Networkwalks |
+| Batch: B083 |
+| Project: | Week 4 – Penetration Testing Project | 
+| Instructor: | Waqas Karim (CCIE) | 
+| Organization: | Networkwalks | 
 
