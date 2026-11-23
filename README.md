@@ -2,7 +2,7 @@
 # PENETRATION TESTING REPORT
 ## MEDIROZA GENERAL HOSPITAL – FULL PENETRATION TESTING PROJECT
 ### W4-PM-FINAL | CYBERSECURITY | NETWORKWALKS
-# Project Information	Details
+### Project Information	Details
 | Pentester Name |	Kondwani Ngwenya |
 | :--- | :---|
 | Program/Batch	| Networkwalks – B084 |
@@ -22,7 +22,7 @@ The activities described in this report were performed within the assigned proje
 This report is intended for educational and security assessment purposes only. The information contained herein should not be used to access, modify or disclose information belonging to systems without appropriate authorization.
 The author, instructor and Networkwalks are not responsible for unauthorized use or misuse of the techniques described in this report.
 
-### 2. Introduction
+## 2. Introduction
 This report presents the findings from the Week 4 Penetration Testing Project conducted as part of the Networkwalks Cybersecurity Internship, Batch B084.
 The project involved conducting a black-box penetration test against a simulated hospital environment, Mediroza General Hospital, using the assigned target domain.
 The main objective was to identify security weaknesses in the web application, investigate authentication mechanisms, examine protected PDF documents and identify exposed information that could affect the confidentiality of hospital records.<br>
@@ -33,7 +33,7 @@ The assessment was divided into four milestones:<br>
 •	M4 – Penetration Testing Report: Documenting the findings, their potential impact, risk ratings and recommended security improvements.
 The assessment involved Kali Linux, command-line utilities, PDF analysis tools and MySQL. Evidence was collected throughout the project to support the findings presented in this report.
 
-### 3. Tools Used
+## 3. Tools Used
 The following tools and technologies were used during the assessment.
 | Tool	| Purpose |
 | :--- | :--- |
@@ -48,8 +48,8 @@ The following tools and technologies were used during the assessment.
 | John the Ripper |	Recovering PDF passwords during the assigned data extraction exercise. |
 | MySQL / MySQL Workbench	| Importing and examining the recovered SQL database backup. |
 
-### 4. Activities Performed
-#### 4.1 M1 – Initial Access
+## 4. Activities Performed
+### 4.1 M1 – Initial Access
 The first milestone involved examining the target website and identifying exposed entry points.
 I began by conducting reconnaissance to understand the website's structure and identify the available authentication pages.
 The reconnaissance activities identified the patient login and staff login pages:<br>
@@ -63,12 +63,12 @@ The error message referenced the MySQL server's SQL syntax, indicating that the 
 This finding demonstrated inadequate handling of user input and the exposure of internal database error information.
 The initial access milestone was completed, and the evidence collected was used to support the subsequent project activities.
 
-#### 4.2 M2 – Data Extraction and PDF Analysis
+### 4.2 M2 – Data Extraction and PDF Analysis
 The second milestone involved examining the PDF laboratory reports recovered during the initial access exercise.
 Three PDF files were recovered:<br>
-•	patient_report_1.pdf<br>
-•	patient_report_2.pdf<br>
-•	patient_report_3.pdf<br>
+- patient_report_1.pdf
+- patient_report_2.pdf
+- patient_report_3.pdf
 I used John the Ripper during the password recovery exercise to investigate the password protection applied to the documents.
 After recovering the passwords, I examined the PDF properties using ExifTool and pdfinfo.
 The examination revealed that the documents used Standard V2.3 PDF encryption with RC4 and 128-bit encryption.
@@ -76,41 +76,36 @@ Additional document metadata was identified, including the document creator and 
 One notable observation was that the third PDF contained a different author value and indicated the presence of custom metadata.
 The exercise demonstrated that password-protected documents can still present security risks when weak passwords are used.
 
-#### 4.3 M3 – Further Data Exposure
+### 4.3 M3 – Further Data Exposure
 The third milestone focused on identifying further information exposure within the simulated hospital environment.
 During this phase, I discovered a publicly accessible SQL database backup through a misconfigured directory listing.
 The backup was available in plain-text SQL format and contained database definitions and insertion statements.
 I examined the backup and identified two tables directly related to the project objectives:
-A. Staff table
+#### A. Staff table
 The staff table contained the following fields:
-•	id
-•	full_name
-•	job_title
-•	department
-•	email
-•	phone
-•	national_id
-•	monthly_salary_zar
-•	date_joined
+- id
+- full_name
+- job_title
+- department
+- email
+- phone
+- national_id
+- monthly_salary_zar
+- date_joined
 The monthly_salary_zar field contained the employee salary information required for the milestone.
-B. Shareholders table
+#### B. Shareholders table
 The shareholders table contained:
-•	id
-•	shareholder_name
-•	share_percent
-•	shares_held
-•	share_class
+- id
+-	shareholder_name
+-	share_percent
+- shares_held
+- share_class
 These fields represented shareholder identities and ownership information.
 I imported the recovered SQL backup into a local MySQL database on Windows to examine its structure and records.
 This confirmed that the exposed backup contained the database tables required to fulfil the M3 objectives.
 The finding demonstrated the risk created when database backups containing confidential organizational information are made publicly accessible.
-Evidence to insert:
-•	Screenshot showing the exposed SQL backup.
-•	Screenshot showing the SQL table definitions.
-•	Screenshot showing successful local database import.
-•	Screenshot showing the staff and shareholders tables.
-•	Redacted screenshots of the relevant query results.
-5. Risk Analysis / Impact
+
+## 5. Risk Analysis / Impact
 Based on the activities performed, the following security findings were identified.
 No.	Risk / Finding	Evidence / Observation	Potential Impact	Risk Level
 1	SQL injection in patient authentication	SQL-related error exposed through mysqli_query() during authentication testing.	Could allow manipulation of database queries and compromise authentication or database confidentiality.	High
