@@ -39,7 +39,9 @@ The following tools and technologies were used during the assessment.
 | :--- | :--- |
 | Kali Linux	| Operating system used for penetration-testing activities. |
 | WHOIS	| Obtaining publicly available domain registration information. | 
-| WhatWeb	 | Identifying web technologies and server information. | 
+| WhatWeb	 | Identifying web technologies and server information. |
+| NSLookup | Used to retrieve DNS information about the target domain. |
+| Wafw00f | Used to identify whether the target website was protected by a Web Application Firewall (WAF).|
 | Nmap |	Discovering open ports and identifying running services.   |
 | Curl	| Inspecting HTTP responses, headers and website resources. | 
 | Browser(Firefox and Chrome)	| Accessing the target website and examining its web pages. | 
@@ -47,6 +49,7 @@ The following tools and technologies were used during the assessment.
 | pdfinfo |	Inspecting PDF properties and encryption information. |
 | John the Ripper |	Recovering PDF passwords during the assigned data extraction exercise. |
 | MySQL / MySQL Workbench	| Importing and examining the recovered SQL database backup. |
+| Claude | AI-assisted technical guidance, troubleshooting, interpretation of findings,<br> and report documentation during the penetration testing exercise.|
 
 ## 4. Activities Performed
 ### 4.1 M1 – Initial Access
